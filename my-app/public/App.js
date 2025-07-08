@@ -40,18 +40,6 @@ function App() {
         </div>
       </nav>
       <header className="App-header">
-        <div style={{ width: '100%', height: '600px', position: 'absolute' }}>
-          <Particles
-            particleColors={['#f5e1e3', '#f3d5db', '#f0ccd7', '#ebc2d1', '#e4a5c5', '#db87be']}
-            particleCount={200}
-            particleSpread={10}
-            speed={0.1}
-            particleBaseSize={100}
-            moveParticlesOnHover={true}
-            alphaParticles={false}
-            disableRotation={false}
-          />
-        </div>
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '60vh' }}>
           <ProfileCard
             name="Senadhi Thimanya"

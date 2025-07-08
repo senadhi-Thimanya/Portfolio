@@ -13,12 +13,13 @@
   --icon: none;
   --behind-gradient: none;
   --inner-gradient: none;
-  --sunpillar-1: hsl(2, 100%, 73%);
-  --sunpillar-2: hsl(53, 100%, 69%);
-  --sunpillar-3: hsl(93, 100%, 69%);
-  --sunpillar-4: hsl(176, 100%, 76%);
-  --sunpillar-5: hsl(228, 100%, 74%);
-  --sunpillar-6: hsl(283, 100%, 73%);
+  /* Updated to pastel pink and hot pink palette */
+  --sunpillar-1: hsl(350, 30%, 90%); /* Very light pastel pink */
+  --sunpillar-2: hsl(340, 35%, 87%); /* Light pastel pink */
+  --sunpillar-3: hsl(330, 40%, 84%); /* Soft pastel pink */
+  --sunpillar-4: hsl(320, 50%, 80%); /* Medium pastel pink */
+  --sunpillar-5: hsl(310, 70%, 75%); /* Deeper pastel pink */
+  --sunpillar-6: hsl(300, 85%, 70%); /* Hot pink for accents */
   --sunpillar-clr-1: var(--sunpillar-1);
   --sunpillar-clr-2: var(--sunpillar-2);
   --sunpillar-clr-3: var(--sunpillar-3);
@@ -46,7 +47,14 @@
   filter: contrast(2) saturate(2) blur(36px);
   transform: scale(0.8) translate3d(0, 0, 0.1px);
   background-size: 100% 100%;
-  background-image: var(--behind-gradient);
+  /* Changed to pastel pink gradient */
+  background-image: radial-gradient(circle at center, 
+    hsl(350, 60%, 85%) 0%, 
+    hsl(340, 55%, 80%) 20%, 
+    hsl(330, 50%, 75%) 40%, 
+    hsl(320, 45%, 70%) 60%, 
+    hsl(310, 40%, 65%) 80%, 
+    hsl(300, 35%, 60%) 100%);
 }
 
 .pc-card-wrapper:hover,
@@ -74,7 +82,8 @@
   transform: translate3d(0, 0, 0.1px) rotateX(0deg) rotateY(0deg);
   background-size: 100% 100%;
   background-position: 0 0, 0 0, 50% 50%, 0 0;
-  background-image: radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y), hsla(266, 100%, 90%, var(--card-opacity)) 4%, hsla(266, 50%, 80%, calc(var(--card-opacity) * 0.75)) 10%, hsla(266, 25%, 70%, calc(var(--card-opacity) * 0.5)) 50%, hsla(266, 0%, 60%, 0) 100%), radial-gradient(35% 52% at 55% 20%, #00ffaac4 0%, #073aff00 100%), radial-gradient(100% 100% at 50% 50%, #00c1ffff 1%, #073aff00 76%), conic-gradient(from 124deg at 50% 50%, #c137ffff 0%, #07c6ffff 40%, #07c6ffff 60%, #c137ffff 100%);
+  /* Updated to softer pink gradient palette */
+  background-image: radial-gradient(farthest-side circle at var(--pointer-x) var(--pointer-y), hsla(350, 30%, 95%, var(--card-opacity)) 4%, hsla(340, 25%, 88%, calc(var(--card-opacity) * 0.75)) 10%, hsla(330, 20%, 82%, calc(var(--card-opacity) * 0.5)) 50%, hsla(320, 15%, 75%, 0) 100%), radial-gradient(35% 52% at 55% 20%, #ffc0cbb4 0%, #ffb6c1 100%), radial-gradient(100% 100% at 50% 50%, #ffc0cb 1%, #f8bbd9 76%), conic-gradient(from 124deg at 50% 50%, #f8bbd9 0%, #ffc0cb 40%, #ffc0cb 60%, #f8bbd9 100%);
   overflow: hidden;
 }
 
@@ -96,7 +105,7 @@
   inset: 1px;
   position: absolute;
   background-image: var(--inner-gradient);
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(25, 10, 20, 0.9); /* Darker, more subtle pink-tinted background */
   transform: translate3d(0, 0, 0.01px);
 }
 
@@ -122,7 +131,7 @@
   background: transparent;
   background-size: cover;
   background-position: center;
-  background-image: repeating-linear-gradient(0deg, var(--sunpillar-clr-1) calc(var(--space) * 1), var(--sunpillar-clr-2) calc(var(--space) * 2), var(--sunpillar-clr-3) calc(var(--space) * 3), var(--sunpillar-clr-4) calc(var(--space) * 4), var(--sunpillar-clr-5) calc(var(--space) * 5), var(--sunpillar-clr-6) calc(var(--space) * 6), var(--sunpillar-clr-1) calc(var(--space) * 7)), repeating-linear-gradient(var(--angle), #0e152e 0%, hsl(180, 10%, 60%) 3.8%, hsl(180, 29%, 66%) 4.5%, hsl(180, 10%, 60%) 5.2%, #0e152e 10%, #0e152e 12%), radial-gradient(farthest-corner circle at var(--pointer-x) var(--pointer-y), hsla(0, 0%, 0%, 0.1) 12%, hsla(0, 0%, 0%, 0.15) 20%, hsla(0, 0%, 0%, 0.25) 120%);
+  background-image: repeating-linear-gradient(0deg, var(--sunpillar-clr-1) calc(var(--space) * 1), var(--sunpillar-clr-2) calc(var(--space) * 2), var(--sunpillar-clr-3) calc(var(--space) * 3), var(--sunpillar-clr-4) calc(var(--space) * 4), var(--sunpillar-clr-5) calc(var(--space) * 5), var(--sunpillar-clr-6) calc(var(--space) * 6), var(--sunpillar-clr-1) calc(var(--space) * 7)), repeating-linear-gradient(var(--angle), #2e0e1a 0%, hsl(330, 40%, 60%) 3.8%, hsl(330, 60%, 66%) 4.5%, hsl(330, 40%, 60%) 5.2%, #2e0e1a 10%, #2e0e1a 12%), radial-gradient(farthest-corner circle at var(--pointer-x) var(--pointer-y), hsla(330, 20%, 10%, 0.1) 12%, hsla(330, 20%, 10%, 0.15) 20%, hsla(330, 20%, 10%, 0.25) 120%);
   background-position: 0 var(--background-y), var(--background-x) var(--background-y), center;
   background-blend-mode: color, hard-light;
   background-size: 500% 500%, 300% 300%, 200% 200%;
@@ -152,7 +161,7 @@
 }
 
 .pc-shine::before {
-  background-image: linear-gradient(45deg, var(--sunpillar-4), var(--sunpillar-5), var(--sunpillar-6), var(--sunpillar-1), var(--sunpillar-2), var(--sunpillar-3)), radial-gradient(circle at var(--pointer-x) var(--pointer-y), hsl(0, 0%, 70%) 0%, hsla(0, 0%, 30%, 0.2) 90%), var(--grain);
+  background-image: linear-gradient(45deg, var(--sunpillar-4), var(--sunpillar-5), var(--sunpillar-6), var(--sunpillar-1), var(--sunpillar-2), var(--sunpillar-3)), radial-gradient(circle at var(--pointer-x) var(--pointer-y), hsl(340, 30%, 80%) 0%, hsla(330, 20%, 40%, 0.2) 90%), var(--grain);
   background-size: 250% 250%, 100% 100%, 220px 220px;
   background-position: var(--pointer-x) var(--pointer-y), center, calc(var(--pointer-x) * 0.01) calc(var(--pointer-y) * 0.01);
   background-blend-mode: color-dodge;
@@ -170,7 +179,7 @@
 .pc-glare {
   transform: translate3d(0, 0, 1.1px);
   overflow: hidden;
-  background-image: radial-gradient(farthest-corner circle at var(--pointer-x) var(--pointer-y), hsl(248, 25%, 80%) 12%, hsla(207, 40%, 30%, 0.8) 90%);
+  background-image: radial-gradient(farthest-corner circle at var(--pointer-x) var(--pointer-y), hsl(340, 40%, 85%) 12%, hsla(330, 50%, 40%, 0.6) 90%);
   mix-blend-mode: overlay;
   filter: brightness(0.8) contrast(1.2);
   z-index: 4;
@@ -214,9 +223,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 192, 203, 0.15); /* Pastel pink with transparency */
   backdrop-filter: blur(30px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 105, 180, 0.2); /* Hot pink border */
   border-radius: 15px;
   padding: 12px 14px;
   pointer-events: auto;
@@ -233,7 +242,7 @@
   height: 48px;
   border-radius: 50%;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 105, 180, 0.3); /* Hot pink border */
   flex-shrink: 0;
 }
 
@@ -260,12 +269,12 @@
 
 .pc-status {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 192, 203, 0.8); /* Pastel pink text */
   line-height: 1;
 }
 
 .pc-contact-btn {
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 105, 180, 0.3); /* Hot pink border */
   border-radius: 8px;
   padding: 8px 16px;
   font-size: 14px;
@@ -274,10 +283,12 @@
   cursor: pointer;
   transition: all 0.2s ease;
   backdrop-filter: blur(10px);
+  background: rgba(255, 20, 147, 0.1); /* Subtle hot pink background */
 }
 
 .pc-contact-btn:hover {
-  border-color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 105, 180, 0.6); /* Brighter hot pink on hover */
+  background: rgba(255, 20, 147, 0.2);
   transform: translateY(-1px);
   transition: all 0.2s ease;
 }
@@ -305,7 +316,7 @@
   margin: 0;
   font-size: min(5svh, 3em);
   margin: 0;
-  background-image: linear-gradient(to bottom, #fff, #6f6fbe);
+  background-image: linear-gradient(to bottom, #fff, #ff69b4); /* White to hot pink gradient */
   background-size: 1em 1.5em;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -315,12 +326,12 @@
 .pc-details p {
   font-weight: 600;
   position: relative;
-  top: -12px;
+  top: -1px;
   white-space: nowrap;
   font-size: 16px;
   margin: 0 auto;
   width: min-content;
-  background-image: linear-gradient(to bottom, #fff, #4a4ac0);
+  background-image: linear-gradient(to bottom, #fff, #ff1493); /* White to deep pink gradient */
   background-size: 1em 1.5em;
   -webkit-text-fill-color: transparent;
   background-clip: text;
