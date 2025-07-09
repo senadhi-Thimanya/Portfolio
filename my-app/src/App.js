@@ -122,7 +122,7 @@ function App() {
       <footer className="App-footer">
         <div style={{ position: 'absolute', overflow: 'hidden', minHeight: '500px', maxHeight: '500px', width: '100%' }}>
           <Ballpit
-            count={90}
+            count={1000}
             gravity={0.5}
             friction={0.9975}
             wallBounce={0.95}
@@ -130,8 +130,8 @@ function App() {
             colors={['#eed4d7', '#eabdc5', '#e5a7b3', '#e089a3', '#db74a1', '#d55ca6']}
             ambientIntensity={2}
             lightIntensity={50}
-            maxSize={0.7}
-            minSize={0.3}
+            maxSize={0.4}
+            minSize={0.1}
             size0={0.7}
           />
         </div>
