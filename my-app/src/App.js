@@ -12,6 +12,7 @@ import grainImg from './assets/grain.webp';
 import iconImg from './assets/iconpattern.png';
 import taxImg from './assets/tax.png';
 import bookImg from './assets/bookstore.png';
+import Ballpit from './assets/Ballpit.js'
 
 const items = [
   {
@@ -47,7 +48,7 @@ function App() {
             <ul className="navbar-nav">
               <li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="#">
-                  <ShinyText text="Home" disabled={false} speed={3} className='custom-class shiny-nav-text' />
+                  <ShinyText text="Profile" disabled={false} speed={3} className='custom-class shiny-nav-text' />
                 </a>
               </li>
               <li className="nav-item">
@@ -119,6 +120,21 @@ function App() {
         <ShinyText text="Just some shiny text!" disabled={false} speed={3} className='custom-class' />
       </main>
       <footer className="App-footer">
+        <div style={{ position: 'absolute', overflow: 'hidden', minHeight: '500px', maxHeight: '500px', width: '100%' }}>
+          <Ballpit
+            count={90}
+            gravity={0.5}
+            friction={0.9975}
+            wallBounce={0.95}
+            followCursor={false}
+            colors={['#eed4d7', '#eabdc5', '#e5a7b3', '#e089a3', '#db74a1', '#d55ca6']}
+            ambientIntensity={2}
+            lightIntensity={50}
+            maxSize={0.7}
+            minSize={0.3}
+            size0={0.7}
+          />
+        </div>
         <p>Footer content goes here</p>
       </footer>
     </div>
