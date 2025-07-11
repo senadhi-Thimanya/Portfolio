@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.4315e4f2.css",
-    "main.js": "/Portfolio/static/js/main.ea3e1652.js",
+    "main.css": "/Portfolio/static/css/main.05adac6c.css",
+    "main.js": "/Portfolio/static/js/main.1b432983.js",
     "static/js/453.96453769.chunk.js": "/Portfolio/static/js/453.96453769.chunk.js",
-    "static/media/bookstore.png": "/Portfolio/static/media/bookstore.2bcab3d7e689c2585734.png",
     "static/media/senadhi.png": "/Portfolio/static/media/senadhi.046fdb7cb8eaa3730af0.png",
-    "static/media/tax.png": "/Portfolio/static/media/tax.977b2a096684149edb8a.png",
+    "static/media/TaxLogo.svg": "/Portfolio/static/media/TaxLogo.8c54b6c143d60d386d5759f136cb02b6.svg",
     "static/media/a.svg": "/Portfolio/static/media/a.bbb234fb6c02511abce1ce8e5401f7db.svg",
     "static/media/grain.webp": "/Portfolio/static/media/grain.c4afeb0384ea214dde6f.webp",
     "static/media/iconpattern.png": "/Portfolio/static/media/iconpattern.e1434a645ac9e90ffbb8.png",
+    "static/media/TravelguideLogo.svg": "/Portfolio/static/media/TravelguideLogo.3ceafb758b43d32ec4bbf4d9caa02220.svg",
+    "static/media/NovelteaLogo.svg": "/Portfolio/static/media/NovelteaLogo.de52084a49eeddbd905effc877e80748.svg",
     "index.html": "/Portfolio/index.html",
-    "main.4315e4f2.css.map": "/Portfolio/static/css/main.4315e4f2.css.map",
-    "main.ea3e1652.js.map": "/Portfolio/static/js/main.ea3e1652.js.map",
+    "main.05adac6c.css.map": "/Portfolio/static/css/main.05adac6c.css.map",
+    "main.1b432983.js.map": "/Portfolio/static/js/main.1b432983.js.map",
     "453.96453769.chunk.js.map": "/Portfolio/static/js/453.96453769.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4315e4f2.css",
-    "static/js/main.ea3e1652.js"
+    "static/css/main.05adac6c.css",
+    "static/js/main.1b432983.js"
   ]
 }
