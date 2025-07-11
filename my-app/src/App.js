@@ -1,4 +1,3 @@
-import { useEffect, useRef } from 'react';
 import './App.css';
 import ShinyText from './assets/ShinyText';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -6,37 +5,18 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { ReactComponent as AIcon } from './assets/a.svg';
 import Particles from './assets/Particles.js';
 import ProfileCard from './assets/ProfileCard.js';
-import ChromaGrid from './assets/ChromaGrid.js';
 import senadhiImg from './assets/senadhi.png';
 import grainImg from './assets/grain.webp';
 import iconImg from './assets/iconpattern.png';
-import taxImg from './assets/tax.png';
-import bookImg from './assets/bookstore.png';
-import Ballpit from './assets/Ballpit.js'
-
-const items = [
-  {
-    image: taxImg,
-    title: "POS and TAX System",
-    subtitle: "Java, JavaFx, Python",
-    borderColor: "#c07ff1",
-    gradient: "linear-gradient(145deg,#c07ff1, #000)",
-    url: "https://github.com/senadhi-Thimanya/POS-TAX-System"
-  },
-  {
-    image: bookImg,
-    title: "NovelTea Bookstore Site",
-    subtitle: "HTML, CSS, JavaScript",
-    borderColor: "#a8dadc",
-    gradient: "linear-gradient(180deg, #a8dadc, #000)",
-    url: "https://github.com/senadhi-Thimanya/NovelTea-Website"
-  }
-];
+import Ballpit from './assets/Ballpit.js';
+import NovelteaLogo from './assets/NovelteaLogo.svg';
+import TravelLogo from './assets/TravelguideLogo.svg';
+import TaxLogo from './assets/TaxLogo.svg';
 
 function App() {
   return (
     <div className="App">
-      <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
+      <nav className="navbar navbar-expand-lg bg-dark navbar-dark" style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000 }}>
         <div className="container-fluid">
           <a className="navbar-brand d-flex align-items-center" href="#" style={{ padding: 0 }}>
             <AIcon style={{ height: '2em', width: 'auto', display: 'block' }} />
@@ -65,7 +45,7 @@ function App() {
           </div>
         </div>
       </nav>
-      <header className="App-header">
+      <header className="App-header" style={{ paddingTop: '100px' }}>
         <div style={{ width: '100%', height: '600px', position: 'absolute' }}>
           <Particles
             particleColors={['#f5e1e3', '#f3d5db', '#f0ccd7', '#ebc2d1', '#e4a5c5', '#db87be']}
@@ -73,7 +53,7 @@ function App() {
             particleSpread={10}
             speed={0.1}
             particleBaseSize={100}
-            moveParticlesOnHover={true}
+            moveParticlesOnHover={false}
             alphaParticles={false}
             disableRotation={false}
           />
@@ -95,7 +75,7 @@ function App() {
         </div>
       </header>
       <main>
-        <div style={{ width: '100%', height: '600px', position: 'absolute' }}>
+        <div style={{ width: '100%', height: '1000px', position: 'absolute' }}>
           <Particles
             particleColors={['#ffffff', '#ffffff']}
             particleCount={200}
@@ -107,17 +87,72 @@ function App() {
             disableRotation={false}
           />
         </div>
-        <div style={{ height: '600px', position: 'relative' }}>
-          <ChromaGrid
-            items={items}
-            radius={300}
-            columns={2}
-            damping={0.45}
-            fadeOut={0.6}
-            ease="power3.out"
-          />
+        <div className="text-4xl font-bold">
+          <ShinyText text="Projects" disabled={false} speed={3} className='custom-class Project-header' id='header-section' />
         </div>
-        <ShinyText text="Just some shiny text!" disabled={false} speed={3} className='custom-class' />
+        <div class="container">
+          <div class="projects-grid">
+            <div class="project-card">
+              <a href='https://github.com/senadhi-Thimanya/POS-TAX-System' target="_blank" >
+                <div class="project-image">
+                  <img src={TaxLogo} alt="Tax System Logo" />
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">POS + Tax System</h3>
+                  <p class="project-description">
+                    POS system for a cakery and TAX system for a government employee
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Java</span>
+                    <span class="tech-tag">JavaFX</span>
+                    <span class="tech-tag">Maven</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="project-card">
+              <a href='https://github.com/senadhi-Thimanya/NovelTea-Website' target="_blank" >
+                <div class="project-image">
+                  <img src={NovelteaLogo} alt="Bookstore Website" />
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">Bookstore Website</h3>
+                  <p class="project-description">
+                    An online platform for browsing and purchasing books, featuring user reviews and recommendations.
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">HTML</span>
+                    <span class="tech-tag">CSS</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">XML</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="project-card">
+              <a href='https://github.com/senadhi-Thimanya/AI-Travel-Guide-for-Sri-Lanka' target="_blank" >
+                <div class="project-image">
+                  <img src={TravelLogo} alt="AI travel guide" />
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">Sri Lankan AI Travel Guide</h3>
+                  <p class="project-description">
+                    Sri Lankan Tourist Guide Chat Assistant using RAG Technology
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">Bicep</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Azure AI Services</span>
+                    <span class="tech-tag">HTML</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
       </main>
       <footer className="App-footer">
         <div style={{ position: 'absolute', overflow: 'hidden', minHeight: '500px', maxHeight: '500px', width: '100%' }}>
@@ -135,7 +170,7 @@ function App() {
             size0={0.7}
           />
         </div>
-        <p>Footer content goes here</p>
+
       </footer>
     </div>
   );

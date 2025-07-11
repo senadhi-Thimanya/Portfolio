@@ -14,12 +14,12 @@
   --behind-gradient: none;
   --inner-gradient: none;
   /* Updated to pastel pink and hot pink palette */
-  --sunpillar-1: hsl(350, 30%, 90%); /* Very light pastel pink */
+  --sunpillar-1: hsl(352, 29%, 90%); /* Very light pastel pink */
   --sunpillar-2: hsl(340, 35%, 87%); /* Light pastel pink */
   --sunpillar-3: hsl(330, 40%, 84%); /* Soft pastel pink */
   --sunpillar-4: hsl(320, 50%, 80%); /* Medium pastel pink */
   --sunpillar-5: hsl(310, 70%, 75%); /* Deeper pastel pink */
-  --sunpillar-6: hsl(300, 85%, 70%); /* Hot pink for accents */
+  --sunpillar-6: hsl(300, 86%, 70%); /* Hot pink for accents */
   --sunpillar-clr-1: var(--sunpillar-1);
   --sunpillar-clr-2: var(--sunpillar-2);
   --sunpillar-clr-3: var(--sunpillar-3);
